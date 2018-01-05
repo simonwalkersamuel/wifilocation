@@ -7,6 +7,7 @@ It consists of a HomeAssistant sensor component and a Tasker script to run on an
 - TensorFlow
 
 HomeAssitant Installation
+
 Copy wifilocation.py into .homeassitant/custom_components/sensor. Create a directory named WifiLocation and edit the WifiLocationControl class so that the self.dir points to it.
 Edit the configuraiton.yaml file to include:
 sensor:
@@ -14,9 +15,11 @@ sensor:
 to the configuration.yaml file.
 
 Calibration
+
 Import the Tasker project file (Wifi_Location.ptj,xml) and use it to create a calibration file, using the Sample Wifi task. Go into each room in the house and set the WIFI_ROOM variable to the name of the room (e.g. bedroom, kitchen). Run the task, and move around the room until the sampling is complete. Then, move to the next room, amend the WIFI_ROOM variable, and repeat the calibration step.
 
 Machine Learning
+
 Copy the calibration file from the Android phone (Tasker/WifiLocation/wifilocation_calibration.txt) onto the HomeAssistant server.
 
 Testing
