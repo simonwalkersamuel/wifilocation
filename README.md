@@ -1,15 +1,21 @@
 # wifilocation
 A HomeAssistant component for room detection, using machine learning of wifi signals
 
-This is a proof of principle project to see if the wifi signals sampled by an android mobile phone can be used to provide room-level location detection.
-It consists of a HomeAssistant sensor component and a Tasker script to run on an Android phone. Wifilocation has the following dependencies (and possibly more...):
+This is a proof-of-principle project to see if the wifi signals sampled by an android mobile phone can be used to provide room-level location detection. Using a minimum (probably) of three wifi routers, placed around your house, the signal strength from them (and your neighbours) can be used to determine your location.
+
+WifiLocation consists of a HomeAssistant custom component (a sensor) and a Tasker project that runs on an Android phone. Only Android can be used at the moment. 
+
+The Home Assistant component has the following dependencies for machine leanring (and possibly more...):
+- numpy
+- scikit
 - Keras
 - TensorFlow
 
 HomeAssitant Installation
 
-Copy wifilocation.py into .homeassitant/custom_components/sensor. Create a directory named WifiLocation and edit the WifiLocationControl class so that the self.dir points to it.
-Edit the configuraiton.yaml file to include:
+Instructions for instlaling Home Assistant can be found here (https://home-assistant.io/). Once instlaled and up-and-running, copy wifilocation.py into the .homeassitant/custom_components/sensor directory.
+
+Edit the Home Assistant configuraiton.yaml file to include:
 sensor:
   - platform: wifilocation
 to the configuration.yaml file.
