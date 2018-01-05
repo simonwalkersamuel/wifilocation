@@ -6,8 +6,8 @@ It consists of a HomeAssistant sensor component and a Tasker script to run on an
 
 HomeAssitant Installation
 Copy wifilocation.py into .homeassitant/custom_components/sensor and add
-sensor:
-  - platform: wifilocation
+"sensor:
+  - platform: wifilocation"
 to the configuration.yaml file.
 
 Calibration
